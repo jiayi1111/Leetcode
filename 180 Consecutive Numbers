@@ -29,3 +29,12 @@ For example, given the above Logs table, 1 is the only number that appears conse
 +-----------------+
 | 1               |
 +-----------------+
+
+Solutions:
+
+SELECT DISTINCT (tb1.Num)  AS ConsecutiveNums
+FROM Logs As tb1,Logs As tb2,Logs As tb3
+WHERE tb1.Id + 1 = tb2.Id AND tb2.Id + 1 = tb3.Id AND tb1.Num = tb2.Num AND tb2.Num = tb3.Num;
+
+Runtime: 457 ms, faster than 90.22% of MySQL online submissions for Consecutive Numbers.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Consecutive Numbers.
