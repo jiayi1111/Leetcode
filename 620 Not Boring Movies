@@ -31,3 +31,6 @@ For the example above, the output should be:
 FROM cinema
 WHERE mod(id,2)=1 AND description !='boring'
 ORDER BY rating DESC;
+
+
+SELECT * FROM cinema WHERE id%2<>0 and description not like 'boring' order by rating desc;
